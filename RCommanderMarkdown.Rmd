@@ -1,0 +1,109 @@
+---
+title: "Replace with Main Title"
+author: "Your Name"
+date: "`r Sys.Date()`"  # Uses current date
+---
+
+
+```{r echo=FALSE, message=FALSE}
+# include this code chunk as-is to set options
+knitr::opts_chunk$set(comment=NA, prompt=TRUE)
+library(Rcmdr)
+library(car)
+library(RcmdrMisc)
+```
+
+
+```{r echo=FALSE}
+# include this code chunk as-is to enable 3D graphs
+library(rgl)
+knitr::knit_hooks$set(webgl = hook_webgl)
+```
+
+
+```{r}
+data()
+```
+
+
+```{r}
+data()
+```
+
+
+```{r}
+data()
+```
+
+
+```{r}
+data()
+```
+
+
+```{r}
+data(presidents, package="datasets")
+presidents <- as.data.frame(presidents)
+```
+
+```{r}
+data(Orange, package="datasets")
+```
+
+```{r}
+data(PublicSchools, package="sandwich")
+```
+
+```{r}
+data(Investment, package="sandwich")
+Investment <- as.data.frame(Investment)
+```
+
+```{r}
+library(abind, pos=17)
+```
+
+
+```{r}
+library(e1071, pos=18)
+```
+
+
+```{r}
+numSummary(Investment[,c("RealGNP", "RealInt", "RealInv"), drop=FALSE], 
+  statistics=c("mean", "sd", "IQR", "quantiles"), quantiles=c(0,.25,.5,.75,1))
+```
+
+```{r}
+cor(Investment[,c("RealGNP","RealInt","RealInv")], use="complete")
+```
+
+```{r}
+RegModel.1 <- lm(RealInv~RealGNP+RealInt, data=Investment)
+summary(RegModel.1)
+```
+
+```{r}
+AIC(RegModel.1)
+```
+
+
+```{r}
+library(MASS, pos=19)
+```
+
+```{r}
+Model_one <- lm(RealInv~RealGNP+RealInt, data=Investment)
+```
+
+
+```{r}
+summary(Model_one)
+```
+
+
+```{r}
+Model_two <- lm(RealInv~RealGNP+RealInt, data=Investment)
+summary(Model_two)
+```
+

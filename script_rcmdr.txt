@@ -1,0 +1,61 @@
+
+data()
+data()
+data(iris, package="datasets")
+data(Investment, package="sandwich")
+Investment <- as.data.frame(Investment)
+editDataset(Investment)
+summary(Investment)
+local({
+  .PC <- princomp(~GNP+Interest+Investment+Price+RealGNP+RealInt+RealInv, 
+  cor=TRUE, data=Investment)
+  cat("\nComponent loadings:\n")
+  print(unclass(loadings(.PC)))
+  cat("\nComponent variances:\n")
+  print(.PC$sd^2)
+  cat("\n")
+  print(summary(.PC))
+})
+local({
+  .PC <- princomp(~GNP+Interest+Investment+Price+RealGNP+RealInt+RealInv, 
+  cor=TRUE, data=Investment)
+  cat("\nComponent loadings:\n")
+  print(unclass(loadings(.PC)))
+  cat("\nComponent variances:\n")
+  print(.PC$sd^2)
+  cat("\n")
+  print(summary(.PC))
+})
+library(abind, pos=17)
+library(e1071, pos=18)
+numSummary(Investment[,c("GNP", "Interest", "Investment", "Price", 
+  "RealGNP", "RealInt", "RealInv"), drop=FALSE], statistics=c("mean", "sd", 
+  "IQR", "quantiles"), quantiles=c(0,.25,.5,.75,1))
+.cluster <-  KMeans(model.matrix(~-1 + GNP + Interest + Investment + Price 
+  + RealGNP + RealInt + RealInv, Investment), centers = 2, iter.max = 10, 
+  num.seeds = 10)
+.cluster$size # Cluster Sizes
+.cluster$centers # Cluster Centroids
+.cluster$withinss # Within Cluster Sum of Squares
+.cluster$tot.withinss # Total Within Sum of Squares
+.cluster$betweenss # Between Cluster Sum of Squares
+biplot(princomp(model.matrix(~-1 + GNP + Interest + Investment + Price + 
+  RealGNP + RealInt + RealInv, Investment)), xlabs = 
+  as.character(.cluster$cluster))
+remove(.cluster)
+numSummary(Investment[,c("GNP", "Interest", "Investment", "Price", 
+  "RealGNP", "RealInt", "RealInv"), drop=FALSE], statistics=c("mean", "sd", 
+  "IQR", "quantiles"), quantiles=c(0,.25,.5,.75,1))
+cor(Investment[,c("GNP","Interest","Investment","Price","RealGNP","RealInt",
+  "RealInv")], use="complete")
+cor(Investment[,c("GNP","Interest","Investment","Price","RealGNP","RealInt",
+  "RealInv")], use="complete")
+RegModel.2 <- lm(GNP~Interest+Investment+Price+RealGNP+RealInt+RealInv, 
+  data=Investment)
+summary(RegModel.2)
+modele_1 <- lm(GNP~Interest+Investment+Price+RealGNP+RealInt+RealInv, 
+  data=Investment)
+summary(modele_1)
+modele_2 <- lm(GNP~Investment+Price+RealGNP+RealInt, data=Investment)
+summary(modele_2)
+
