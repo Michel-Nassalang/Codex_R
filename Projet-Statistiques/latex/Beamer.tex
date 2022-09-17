@@ -1,0 +1,106 @@
+\documentclass[]{beamer}
+
+%\userpackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{xcolor,colortbl,array,graphicx}
+\usepackage{times}
+\usepackage{amsthm,amsmath,amsfonts,amssymb,amstext}
+\usepackage{lipsum}
+\usepackage{hyperref,url}
+
+\title[Etude et optimisation]{}
+% ----------------------
+\author[Nassalang]{M.~Nassalang }
+% ----------------------
+\institute[IPSL]{
+\inst{1}%
+Département d'informatique\\
+Université Gaston Berger de Saint-Louis \and \inst{2}%
+Département de Philosophie Théorique\\
+Université d'Ailleurs}
+% ----------------------
+\date[]{Présentation Arduino}
+
+% ----------------------
+\mode <presentation> {
+\usetheme{Montpellier}
+%{Bergen}{PaloAlto}{Berkeley}{Boadilla}{Pittsburgh}{Rochester}
+%{Antibes}{Montpellier}{JuanLesPins}{Berkeley}
+\usecolortheme{whale}
+%{whale} {orchid}{owl}{albatross}{beaver}
+\usefonttheme{professionalfonts}
+%{professionalfonts} {serif}{structurebold}
+%{structureitalicserif}{structuresmallcapsserif}
+\useoutertheme{infolines}
+%{infolines} {miniframes}{shadow}{sidebar}
+%{smoothbars}{smoothtree}{split}{tree}
+\useinnertheme{rectangles}
+%{circles}{rounded}{rectangles}{inmargin}
+\setbeamercovered{transparent=50}
+}
+\AtBeginSection[]
+{
+\begin{frame}
+<beamer>
+\frametitle{\sc plan de l'exposé}
+\tableofcontents[currentsection,currentsubsection]
+
+\end{frame}
+}
+
+\begin{document}
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	\section{Motivation}
+	\subsection{Rêves}
+	\begin{frame}
+	{Construction de la rêve dans la vie réelle}
+	{Situation matrimoniale}
+	\begin{itemize}
+	\item Utilisez \texttt{itemize} à volonté.
+	\item Utilisez des phrases très courtes et de 			courtes expressions.
+	\end{itemize}
+	\end{frame}
+	\subsection{Vision du futur}
+	\begin{frame}
+	{Objectifs}
+	{Réalisation}
+	\lipsum[5]
+	\end{frame}
+	\section{Développement personnel}
+	\subsection{Mentalité}
+	\begin{frame}
+	{Personnalité}
+	{Confiance en soi}
+	\begin{itemize}
+	\item Utilisez \texttt{itemize} à volonté.
+	\item Utilisez des phrases très courtes et de 			courtes expressions.
+	\end{itemize}
+	\end{frame}
+	\subsection{Reveiller le meilleur en soi}
+	\begin{frame}
+	{méditation}
+	{Psychologie}
+	\lipsum[7]
+	\end{frame}
+	\begin{frame}
+	{Faites des titres qui informent}
+	Vous pouvez créer des recouvrements \dots
+	\begin{itemize}
+	\item en utilisant la commande \texttt{pause}:
+	\begin{itemize}
+	\item
+	Premier item. \pause
+	\item 
+	Second item. \pause
+	\end{itemize}
+	\item en  utilisant les spécifications des recouvrements 
+	\end{itemize}
+	\end{frame}
+\end{document}
+
+
+

@@ -1,0 +1,7 @@
+\babel@toc {french}{}
+\beamer@sectionintoc {1}{Motivation}{2}{0}{1}
+\beamer@subsectionintoc {1}{1}{Rêves}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{Vision du futur}{4}{0}{1}
+\beamer@sectionintoc {2}{Développement personnel}{5}{0}{2}
+\beamer@subsectionintoc {2}{1}{Mentalité}{6}{0}{2}
+\beamer@subsectionintoc {2}{2}{Reveiller le meilleur en soi}{7}{0}{2}
